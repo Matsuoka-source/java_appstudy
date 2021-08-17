@@ -18,11 +18,24 @@ public class Class1 {
 		System.out.println(m2 + "     HP: " + hp2);
 		System.out.println(m3 + "       HP: " + hp3);
 		System.out.println("--------------------");
-		System.out.println("勇者の攻撃");
+		System.out.println("勇者の攻撃!");
 		System.out.println("おばけに20のダメージ");
-		
-		hp1 = hp1-20;
-		
+
+		hp1 = hp1 - 20;
+
+		System.out.println("--------------------");
+		System.out.println(m1 + "       HP: " + hp1);
+		System.out.println(m2 + "     HP: " + hp2);
+		System.out.println(m3 + "       HP: " + hp3);
+		System.out.println("--------------------");
+
+		int heal = 10;
+
+		System.out.println("おばけの回復魔法！");
+		System.out.println("おばけはHPを" + heal + "回復した。");
+
+		hp1 = hp1 + heal;
+
 		System.out.println("--------------------");
 		System.out.println(m1 + "       HP: " + hp1);
 		System.out.println(m2 + "     HP: " + hp2);
