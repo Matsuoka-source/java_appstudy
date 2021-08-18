@@ -17,7 +17,7 @@ public class Class1 {
 		int hp3 = 280;
 
 		// ダメージ量（一旦乱数を使用）
-		int da1 = new Random().nextInt(30);
+		int da1 = new Random().nextInt(40);
 		int da2 = new Random().nextInt(30);
 
 		System.out.println("モンスターが現れた。");
@@ -27,15 +27,21 @@ public class Class1 {
 		System.out.println(m3 + "       HP: " + hp3);
 		System.out.println("--------------------");
 
+		// 勇者の攻撃は単体
 		System.out.println("勇者の攻撃!");
 		System.out.println("おばけに" + da1 + "のダメージ");
 		hp1 = hp1 - da1;
 
-		System.out.println("勇者の連続攻撃!");
-		System.out.println("おばけに" + da2 + "のダメージ");
+		System.out.println("魔法使いの攻撃!");
+		// 魔法使いの攻撃は全体
+		System.out.println(m1 + "に" + da2 + "のダメージ");
 		hp1 = hp1 - da2;
 
-		System.out.println("合計" + (da1 + da2) + "のダメージ");
+		System.out.println(m2 + "に" + da2 + "のダメージ");
+		hp2 = hp2 - da2;
+
+		System.out.println(m3 + "に" + da2 + "のダメージ");
+		hp3 = hp3 - da2;
 
 		System.out.println("--------------------");
 		System.out.println(m1 + "       HP: " + hp1);
@@ -43,11 +49,11 @@ public class Class1 {
 		System.out.println(m3 + "       HP: " + hp3);
 		System.out.println("--------------------");
 
+		// 回復の乱数
 		int heal = new Random().nextInt(30);
 
 		System.out.println("おばけの回復魔法！");
 		System.out.println("おばけはHPを" + heal + "回復した。");
-
 		hp1 = hp1 + heal;
 
 		System.out.println("--------------------");
