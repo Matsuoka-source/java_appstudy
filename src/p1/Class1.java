@@ -21,8 +21,10 @@ public class Class1 {
 		int hp3 = 280;
 
 		// ダメージ量（一旦乱数を使用）
-		int da1 = new Random().nextInt(40);
-		int da2 = new Random().nextInt(30);
+		// 勇者の攻撃
+		int da1 = new Random().nextInt(100);
+		// 魔法使いの攻撃
+		int da2 = new Random().nextInt(100);
 
 		// バトルの開始
 		// パラメーターの表示
@@ -54,8 +56,28 @@ public class Class1 {
 		System.out.println(m3 + "       HP: " + hp3);
 		System.out.println("--------------------");
 
+		// おばけのHPが0以下だった場合
 		if (hp1 <= 0) {
 			System.out.println(m1 + "は倒れた!!");
+		}
+		// スライムのHPが0以下だった場合
+		if (hp2 <= 0) {
+			System.out.println(m2 + "は倒れた!!");
+		}
+		// 箱太郎のHPが0以下だった場合
+		if (hp3 <= 0) {
+			System.out.println(m3 + "は倒れた!!");
+		}
+
+		// 余裕判定
+		if (da1 + da2 <= 50) {
+			System.out.println(m1 + "は余裕でほほ笑んだ!");
+		}
+		if (da2 <= 50) {
+			System.out.println(m2 + "は余裕でほほ笑んだ!");
+		}
+		if (da2 <= 50) {
+			System.out.println(m3 + "は余裕でほほ笑んだ!");
 		}
 
 		// 回復の乱数
