@@ -24,7 +24,7 @@ public class Class1 {
 		// 勇者の攻撃
 		int da1 = new Random().nextInt(100);
 		// 魔法使いの攻撃
-		int da2 = new Random().nextInt(100);
+		int da2 = new Random().nextInt(1000);
 
 		// バトルの開始
 		// パラメーターの表示
@@ -69,7 +69,7 @@ public class Class1 {
 			System.out.println(m3 + "は倒れた!!");
 		}
 
-		// 余裕判定
+		// 余裕判定(合計ダメージが50以下の場合に表示)
 		if (da1 + da2 <= 50) {
 			System.out.println(m1 + "は余裕でほほ笑んだ!");
 		}
@@ -78,6 +78,10 @@ public class Class1 {
 		}
 		if (da2 <= 50) {
 			System.out.println(m3 + "は余裕でほほ笑んだ!");
+		}
+		// 勝利判定
+		if (hp1 <= 0 && hp2 <= 0 && hp3 <= 0) {
+			System.out.println("戦いに勝利した!!");
 		}
 
 		// 回復の乱数
